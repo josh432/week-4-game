@@ -39,7 +39,7 @@ $(document).ready(function(){
 		$("#red").click(function() {
 			if (endOfGame == false) {
 			playerScore = playerScore + crystal.red.power;
-		//	checkScore();
+			checkScore();
 			$("#playerScore").html(playerScore);
 			};
 		})
