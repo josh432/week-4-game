@@ -6,7 +6,7 @@ var randNum = 0;
 var endOfGame = false;
 var playerLoses = false;
 var wins = 0;
-var loses = 0;
+var losses = 0;
 
 var crystal = {
 
@@ -49,7 +49,7 @@ $(document).ready(function(){
 		$("#blue").click(function(){
 			if (endOfGame == false) {
 				playerScore = playerScore + crystal.blue.power;
-		//		checkScore();
+		        checkScore();
 				$("#playerScore").html(playerScore);
 			};
 		})
@@ -59,7 +59,7 @@ $(document).ready(function(){
 		$("#yellow").click(function() {
 			if (endOfGame == false) {
 				playerScore = playerScore + crystal.yellow.power;
-			//	checkScore();
+			    checkScore();
 				$("#playerScore").html(playerScore);
 			};
 		})
@@ -69,7 +69,7 @@ $(document).ready(function(){
 		$("#green").click(function(){
 			if (endOfGame == false) {
 				playerScore = playerScore + crystal.green.power;
-			//	checkScore();
+			    checkScore();
 				$("#playerScore").html(playerScore);
 			};
 		})
@@ -79,21 +79,30 @@ $(document).ready(function(){
 
 	//Begin functions
 
-//	function checkScore() {
-//		$("#playerScore").html(playerScore);
-//			if (playerScore == randNum){
-//				endOfGame = true;
-//				wins++;
-//				$("#message").text("Congratulations, you win!");
-//				$("#wins").html(wins);
+	function checkScore() {
+		$("#playerScore").html(playerScore);
+			if (playerScore == randNum) {
+				endOfGame = true;
+				wins++;
+				$("#message").text("Congratulations, you win!");
 
-//				endOfGame = true;
-//				playerLoses = true;
-//				losses++;
-//				$("#losses").html(losses);
-//			};
+			} else if (playerScore > randNum) {
+				playerLoses = true;
+				endOfGame = true; 
+				losses++;
+				$("#message").text("So sorry, you lost!");
+			};
 
-	
+			if (endOfGame) {
+				$("#wins").html(wins);
+				$("#losses").html(losses);
+				setTimeout(startGame, 3000);
+			}
+
+
+	} 
+
+
 
 
 
@@ -120,7 +129,7 @@ $(document).ready(function(){
 		$("#playerScore").html(playerScore);
 		$("#randNum").html(randNum);
 		$("#wins").html(wins);
-		$("#losses").html(loses);
+		$("#losses").html(losses);
 		$("#message").text("New Game!");
 
 
