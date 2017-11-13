@@ -28,22 +28,75 @@ var crystal = {
 	green: {
 		image: "./assets/images/green.png",
 		power: 0,
-	},
-
+	},	
 };
 
+//Begin Jquery/Javascript
 
 $(document).ready(function(){
 
 	$("#red").append("<img src =" + crystal.red.image + ">");
+		$("#red").click(function() {
+			if (endOfGame == false) {
+			playerScore = playerScore + crystal.red.power;
+		//	checkScore();
+			$("#playerScore").html(playerScore);
+			};
+		})
 
 
 	$("#blue").append("<img src=" + crystal.blue.image + ">");
+		$("#blue").click(function(){
+			if (endOfGame == false) {
+				playerScore = playerScore + crystal.blue.power;
+		//		checkScore();
+				$("#playerScore").html(playerScore);
+			};
+		})
 
 
 	$("#yellow").append("<img src=" + crystal.yellow.image + ">");
+		$("#yellow").click(function() {
+			if (endOfGame == false) {
+				playerScore = playerScore + crystal.yellow.power;
+			//	checkScore();
+				$("#playerScore").html(playerScore);
+			};
+		})
+
 
 	$("#green").append("<img src=" + crystal.green.image + ">");
+		$("#green").click(function(){
+			if (endOfGame == false) {
+				playerScore = playerScore + crystal.green.power;
+			//	checkScore();
+				$("#playerScore").html(playerScore);
+			};
+		})
+
+
+
+
+	//Begin functions
+
+//	function checkScore() {
+//		$("#playerScore").html(playerScore);
+//			if (playerScore == randNum){
+//				endOfGame = true;
+//				wins++;
+//				$("#message").text("Congratulations, you win!");
+//				$("#wins").html(wins);
+
+//				endOfGame = true;
+//				playerLoses = true;
+//				losses++;
+//				$("#losses").html(losses);
+//			};
+
+	
+
+
+
 
 
 
@@ -58,11 +111,17 @@ $(document).ready(function(){
 		crystal.yellow.power = Math.round(Math.random() * (12-1)) + 1;
 		crystal.green.power = Math.round(Math.random() * (12-1)) + 1;
 
-		console.log(randNum);
-		console.log(crystal.red.power);
-		console.log(crystal.blue.power);
-		console.log(crystal.yellow.power);
-		console.log(crystal.green.power);
+		//console.log(randNum);
+		//console.log(crystal.red.power);
+		//console.log(crystal.blue.power);
+		//console.log(crystal.yellow.power);
+		//console.log(crystal.green.power);
+
+		$("#playerScore").html(playerScore);
+		$("#randNum").html(randNum);
+		$("#wins").html(wins);
+		$("#losses").html(loses);
+		$("#message").text("New Game!");
 
 
 
@@ -78,7 +137,7 @@ startGame();
 
 
 
-});
+}); //Close JQuery/Javascript
 
 
 	
