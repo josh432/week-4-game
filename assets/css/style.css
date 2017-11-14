@@ -20,9 +20,31 @@ body {
 	font-size: 1.5em;
 }
 
-.video {
-	padding-left:75px;
+
+#randNum, #wins, #losses, #playerScore, #message {
+	font-size: 1.5em;
 }
+
+.video {
+	float: right;
+	position:relative;
+	top:-22em;
+}
+
+@media screen and (max-width:1007px) {
+	.video{
+		top: -15em;
+	}
+
+}
+
+@media screen and (max-width:540px) {
+	.video {
+		visibility: hidden;
+	}
+
+
+
 
 
 
