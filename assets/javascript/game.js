@@ -7,6 +7,9 @@ var endOfGame = false;
 var playerLoses = false;
 var wins = 0;
 var losses = 0;
+var lossSound = new Audio ("Sad-trombone.mp3");
+var winSound = new Audio ("Funny-fanfare-sound.mp3");
+
 
 var crystal = {
 
@@ -85,12 +88,15 @@ $(document).ready(function(){
 				endOfGame = true;
 				wins++;
 				$("#message").text("Congratulations, you win!");
+				winSound.play();
+				
 
 			} else if (playerScore > randNum) {
 				playerLoses = true;
 				endOfGame = true; 
 				losses++;
 				$("#message").text("So sorry, you lost!");
+				lossSound.play();
 			};
 
 			if (endOfGame) {
