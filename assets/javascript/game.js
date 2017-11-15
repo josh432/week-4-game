@@ -14,22 +14,22 @@ var winSound = new Audio ("Funny-fanfare-sound.mp3");
 var crystal = {
 
 	red: {
-		image: "./assets/images/red.png",
+		image: "./assets/images/pic4.jpg",
 		power: 0,
 	},
 
 	blue: {
-		image: "./assets/images/blue.png",
+		image: "./assets/images/pic2.jpg",
 		power: 0,
 	},
 
 	yellow: {
-		image: "./assets/images/yellow.png",
+		image: "./assets/images/pic1.jpg",
 		power: 0,
 	},
 
 	green: {
-		image: "./assets/images/green.png",
+		image: "./assets/images/pic3.jpg",
 		power: 0,
 	},	
 };
@@ -111,10 +111,6 @@ $(document).ready(function(){
 
 
 
-
-
-
-
 	function startGame() {
 		endOfGame = false;
 		playerLoses = 0;
@@ -137,10 +133,6 @@ $(document).ready(function(){
 		$("#wins").html(wins);
 		$("#losses").html(losses);
 		$("#message").text("New Game!");
-
-
-
-
 
 	}
 

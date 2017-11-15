@@ -9,6 +9,7 @@ header, {
 
 
 body {
+
 	background: url("../images/cavern.jpg") no-repeat;
 	background-size: cover;
 
@@ -16,32 +17,67 @@ body {
 }
 
 .container {
+
 	font-family: 'Abril Fatface', cursive;
 	font-size: 1.5em;
 }
 
 
 #randNum, #wins, #losses, #playerScore, #message {
+
 	font-size: 1.5em;
 }
 
+
 .video {
-	float: right;
+
 	position:relative;
-	top:-22em;
+	left:21em;
+}
+
+.crystals img {
+
+	width: 200px;
+	padding-left: 50px
+} 
+
+img:hover {
+
+	opacity: 0.7;
+    transition: opacity .25s ease-in;
+    transform: rotate(-7deg) scale(1.1);
+}
+
+@media screen and (max-width:1080px) {
+	.video{
+		left: 17em;
+	}
+
 }
 
 @media screen and (max-width:1007px) {
-	.video{
-		top: -15em;
+	.video {
+		left:12em;
+		
 	}
 
 }
 
-@media screen and (max-width:540px) {
-	.video {
-		visibility: hidden;
+@media screen and (max-width: 631px) {
+	img {
+		
+		margin-left: -60px;
 	}
+
+	.video {
+		left: 3em;
+	}
+}
+
+
+
+
+
 
 
 
