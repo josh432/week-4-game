@@ -39,7 +39,7 @@ var crystal = {
 $(document).ready(function(){
 
 	$("#red").append("<img src =" + crystal.red.image + ">");
-		$("#red").click(function() {
+		$("#red").on('click', function() {
 			if (endOfGame == false) {
 			playerScore = playerScore + crystal.red.power;
 			checkScore();
@@ -49,7 +49,7 @@ $(document).ready(function(){
 
 
 	$("#blue").append("<img src=" + crystal.blue.image + ">");
-		$("#blue").click(function(){
+		$("#blue").on('click', function() {
 			if (endOfGame == false) {
 				playerScore = playerScore + crystal.blue.power;
 		        checkScore();
@@ -59,7 +59,7 @@ $(document).ready(function(){
 
 
 	$("#yellow").append("<img src=" + crystal.yellow.image + ">");
-		$("#yellow").click(function() {
+		$("#yellow").on('click', function() {
 			if (endOfGame == false) {
 				playerScore = playerScore + crystal.yellow.power;
 			    checkScore();
@@ -69,7 +69,7 @@ $(document).ready(function(){
 
 
 	$("#green").append("<img src=" + crystal.green.image + ">");
-		$("#green").click(function(){
+		$("#green").on('click', function() {
 			if (endOfGame == false) {
 				playerScore = playerScore + crystal.green.power;
 			    checkScore();

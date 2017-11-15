@@ -7,12 +7,29 @@ header, {
     height: 100%;
 }
 
+.jumbotron {
+
+	background-color: rgba(183,140,192,0.55);
+}
+
+h2 {
+
+	color:red;
+	
+}
+
 
 body {
 
 	background: url("../images/cavern.jpg") no-repeat;
 	background-size: cover;
 
+
+}
+
+.well{
+
+	background-color: rgba(183,140,192,0.55);
 
 }
 
