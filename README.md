@@ -4,4 +4,5 @@ This timed Simpson's quiz is a challenge where the quiz taker must answer questi
 
 Give it a try here: https://josh432.github.io/TriviaGame/index.html
 
-
+![simp1](https://user-images.githubusercontent.com/27470842/36608483-dc17a9c8-187e-11e8-8102-cf7d246e5c94.PNG)
+![simp2](https://user-images.githubusercontent.com/27470842/36608489-df3e35d6-187e-11e8-9180-ae872c90890e.PNG)
